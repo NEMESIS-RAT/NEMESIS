@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "21670621695",
+    "firebase_url": "https://nemesisc2-default-rtdb.firebaseio.com",
+    "project_id": "nemesisc2",
+    "storage_bucket": "nemesisc2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21670621695:android:264248bc3fd247bb39b7ca",
+        "android_client_info": {
+          "package_name": "com.nemesis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVxLBb-GLSf0vY00KNa2LycfQqdV2KRYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
