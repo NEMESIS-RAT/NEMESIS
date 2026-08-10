@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: '17'
@@ -20,19 +20,13 @@ jobs:
     - name: Make Gradle executable
       run: chmod +x gradlew
 
-    - name: Build APK with full log
+    - name: Build APK
       run: |
-        ./gradlew assembleDebug --info --stacktrace 2>&1 | tee build.log
-        echo "=== BUILD LOG ==="
-        cat build.log
+        ./gradlew assembleDebug
+        echo "=== Checking APK output ==="
+        find . -name "*.apk" || echo "No APK found"
 
-    - name: Check APK output
-      run: |
-        echo "=== Checking APK folder ==="
-        ls -la app/build/outputs/apk/ || echo "APK folder not found"
-        find app/build -name "*.apk" || echo "No APK found anywhere"
-
-    - name: Upload APK if exists
+    - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: Nemesis-APK
