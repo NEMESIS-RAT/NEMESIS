@@ -1,1 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#0a0a1a">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="◆ APP BUILD"
+        android:textSize="24sp"
+        android:textColor="#ff0055"
+        android:fontFamily="monospace"
+        android:shadowColor="#ff0055"
+        android:shadowRadius="20"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/tvApkName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum ada APK dipilih"
+        android:textColor="#888"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#666"
+        android:textSize="12sp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnPickApk"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="◆ Pilih APK"
+        android:background="@drawable/btn_red"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnInject"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="◆ Inject ke Target"
+        android:background="@drawable/btn_gold"
+        android:textColor="#fff"
+        android:textSize="14sp"
+        android:enabled="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="◆ NEMESIS v1.0"
+        android:textSize="10sp"
+        android:textColor="#222"
+        android:fontFamily="monospace"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
