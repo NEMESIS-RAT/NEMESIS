@@ -3,8 +3,6 @@ name: Build APK
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -13,26 +11,28 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up JDK 21
-      uses: actions/setup-java@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
-        java-version: '21'
+        java-version: '17'
 
     - name: Make Gradle executable
       run: chmod +x gradlew
 
-    - name: Build APK
-      run: ./gradlew assembleDebug
-
-    - name: List files (debug)
-      if: always()
+    - name: Build APK with full log
       run: |
-        echo "=== Listing APK files ==="
-        ls -la app/build/outputs/apk/debug/ || echo "Folder not found"
-        ls -la app/build/outputs/apk/ || echo "APK folder not found"
+        ./gradlew assembleDebug --info --stacktrace 2>&1 | tee build.log
+        echo "=== BUILD LOG ==="
+        cat build.log
 
-    - name: Upload APK
+    - name: Check APK output
+      run: |
+        echo "=== Checking APK folder ==="
+        ls -la app/build/outputs/apk/ || echo "APK folder not found"
+        find app/build -name "*.apk" || echo "No APK found anywhere"
+
+    - name: Upload APK if exists
       uses: actions/upload-artifact@v4
       with:
         name: Nemesis-APK
